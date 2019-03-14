@@ -22,7 +22,7 @@ gem 'carrierwave'
 gem 'fast_jsonapi'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem 'foreman', '~> 0.85.0'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'pagy'
