@@ -1,26 +1,32 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, { Fragment, Component } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './App.css';
-
+import 'semantic-ui-css/semantic.min.css'
+import { Container } from 'semantic-ui-react'
+import Home from './containers/Home'
+import NavBar from './containers/navigation/NavBar'
+import { Grid } from 'semantic-ui-react'
 class App extends Component {
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Router>
+        <Fragment>
+          <Container fluid>
+            <NavBar />
+
+            {/* <Grid padded stackable columns={3}>
+              <Grid.Row>
+                <Grid.Column>Grid1</Grid.Column>
+                <Grid.Column>Grid2</Grid.Column>
+                <Grid.Column>Grid3</Grid.Column>
+              </Grid.Row>
+            </Grid> */}
+
+          </Container>
+          <Route exact path="/" component={Home} />
+        </Fragment>
+      </Router>
     );
   }
 }
