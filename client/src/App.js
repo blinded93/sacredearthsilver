@@ -1,30 +1,19 @@
 import React, { Fragment, Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './App.css';
-import 'semantic-ui-css/semantic.min.css'
-import { Container } from 'semantic-ui-react'
+import NavBar from './containers/NavBar'
 import Home from './containers/Home'
-import NavBar from './containers/navigation/NavBar'
-import { Grid } from 'semantic-ui-react'
+import Items from './containers/Items'
+
 class App extends Component {
 
   render() {
     return (
       <Router>
         <Fragment>
-          <Container fluid>
-            <NavBar />
-
-            {/* <Grid padded stackable columns={3}>
-              <Grid.Row>
-                <Grid.Column>Grid1</Grid.Column>
-                <Grid.Column>Grid2</Grid.Column>
-                <Grid.Column>Grid3</Grid.Column>
-              </Grid.Row>
-            </Grid> */}
-
-          </Container>
-          <Route exact path="/" component={Home} />
+          <NavBar />
+          <Route exact path='/' component={Home} />
+          <Route path='/items' component={Items} />
         </Fragment>
       </Router>
     );
