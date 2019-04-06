@@ -1,9 +1,10 @@
 import React, { Fragment, Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './App.css';
-import NavBar from './containers/NavBar'
+import Nav from './containers/Nav'
 import Home from './containers/Home'
 import Items from './containers/Items'
+import Login from './containers/Login'
 
 class App extends Component {
 
@@ -11,8 +12,9 @@ class App extends Component {
     return (
       <Router>
         <Fragment>
-          <NavBar />
-          <Route exact path='/' component={Home} />
+          <Nav />
+      {/* <Route exact path='/' component={Home} /> */}
+          {/* <Route path='/admin' component={Login} /> */}
           <Route path='/items' component={Items} />
         </Fragment>
       </Router>
