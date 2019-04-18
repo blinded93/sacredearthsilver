@@ -9,6 +9,7 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.boolean :recycled
       t.string :image
       t.string :status
+      t.references :category, foreign_key: true
 
       t.timestamps
     end

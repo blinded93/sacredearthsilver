@@ -1,7 +1,7 @@
 class Api::CategorySerializer
   include FastJsonapi::ObjectSerializer
   
-  has_many :items, serializer: Api::ItemThumbSerializer
+  # has_many :items, serializer: Api::ItemThumbSerializer
   
-  attributes :name, :items
+  attributes :name
 end

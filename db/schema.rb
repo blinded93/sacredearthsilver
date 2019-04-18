@@ -39,15 +39,6 @@ ActiveRecord::Schema.define(version: 2019_03_27_012827) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "item_categories", force: :cascade do |t|
-    t.integer "item_id"
-    t.integer "category_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["category_id"], name: "index_item_categories_on_category_id"
-    t.index ["item_id"], name: "index_item_categories_on_item_id"
-  end
-
   create_table "item_materials", force: :cascade do |t|
     t.integer "item_id"
     t.integer "material_id"
@@ -66,9 +57,11 @@ ActiveRecord::Schema.define(version: 2019_03_27_012827) do
     t.boolean "recycled"
     t.string "image"
     t.string "status"
+    t.integer "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "size"
+    t.index ["category_id"], name: "index_items_on_category_id"
   end
 
   create_table "materials", force: :cascade do |t|
