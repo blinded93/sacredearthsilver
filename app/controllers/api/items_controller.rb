@@ -1,6 +1,6 @@
 class Api::ItemsController < ApplicationController
   def index
-    items = Api::ItemSerializer.new(Item.includes(:categories, :materials))
+    items = Api::ItemSerializer.new(Item.includes(:materials))
 
     render json: items,
            status: 200
