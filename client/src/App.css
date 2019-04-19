@@ -96,6 +96,35 @@ body {
     overflow-y: scroll;
   }
 }
+
+@media (min-width: 576px) {
+    .card-columns {
+        column-count: 2;
+    }
+}
+
+@media (min-width: 768px) {
+    .card-columns {
+        column-count: 3;
+    }
+}
+
+@media (min-width: 992px) {
+    .card-columns {
+        column-count: 4;
+}
+    #main {
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+}
+
+#main {
+  overflow-y: scroll;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 .navbar-toggler {
