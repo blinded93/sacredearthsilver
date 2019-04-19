@@ -8,6 +8,9 @@ body {
 .nav-link {
     font-weight:300;
     color:black !important;
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    transition: color 0.5s;
 }
 
 .navbar-nav:hover a:not(:hover) {
