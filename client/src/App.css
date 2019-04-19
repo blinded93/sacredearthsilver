@@ -131,6 +131,10 @@ body {
   column-count: 1 !important;
 }
 
+.link-cursor {
+  cursor: pointer;
+}
+
 .navbar-toggler {
   border-color: #fff !important;
 }
