@@ -127,6 +127,10 @@ body {
   margin-right: auto !important;
 }
 
+.cart {
+  column-count: 1 !important;
+}
+
 .navbar-toggler {
   border-color: #fff !important;
 }
