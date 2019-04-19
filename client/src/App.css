@@ -53,10 +53,34 @@ body {
 
 @media screen and (min-width:768px) {
   img#navbar-brand { display: inline; }
+  #main { margin-top: 5rem; }
+  #filter-items-select {
+    justify-content: flex-end !important;
+    display: flex !important;
+}
+  .modal-body {
+    height: 600px;
+    overflow-y: scroll;
+  }
+  img#logo-img {
+    width: 0.1px;
+    height: 62px;
+    -webkit-transition: width 0.5s;
+    -moz-transition: width 0.5s;
+    transition: width 0.5s;
+  }
+  img#logo-img.active {
+    width: 80px;
+  }
+}
+
+.right-select {
+  justify-content: flex-end !important;
+  display: flex !important;
 }
 
 @media screen and (max-width:768px) {
-  img#navbar-brand { display: none; }
+  img#navbar-brand { display: none !important; }
 }
 
 .navbar-toggler {
