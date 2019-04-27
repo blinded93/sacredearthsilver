@@ -3,8 +3,7 @@ import { Card } from 'react-bootstrap'
 import { formattedPrice } from '../helpers'
 
 const ItemCard = props => {
-  const { id, item, openModal } = props
-  const formattedPrice = (item.price / 100).toFixed(2)
+  const { item, openModal, isCartItem, removeItem, abbrItemName } = props
 
   return (
     <Fragment>
@@ -24,9 +23,12 @@ const ItemCard = props => {
           <Card.Title
             onClick={openModal}
             className='link-cursor'>
-              {item.name}
+            {abbrItemName(item.name)}
           </Card.Title>
+          <div
+            className='d-flex justify-content-between'>
           <Card.Text
+              as='span'
             className='text-muted'>
             <small className='align-text-bottom'>
                 $</small>{formattedPrice(item.price)}
