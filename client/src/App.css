@@ -53,14 +53,17 @@ body {
 
 @media screen and (min-width:768px) {
   img#navbar-brand { display: inline; }
-  #main { margin-top: 5rem; }
+  #main { margin-top: 6rem; }
   #filter-items-select {
     justify-content: flex-end !important;
     display: flex !important;
   }
   .modal-body {
-    height: 600px;
+    height: 700px;
     overflow-y: scroll;
+  }
+  .mobile-modal {
+    display: none;
   }
   img#logo-img {
     width: 0.1px;
@@ -80,19 +83,26 @@ body {
 }
 
 @media screen and (max-width:768px) {
-  img#navbar-brand { display: none !important; }
+  img#logo-img { display: none !important; }
   #main {
     margin-top: 4rem;
     overflow-y: scroll;
   }
+  .filter {
+    margin-top: 0.25rem !important;
+    margin-bottom: 0.25rem !important;
+  }
   .modal-title {
     font-size: 1.3rem;
+  }
+  .mobile-modal {
+    display:inline-block;
   }
   .modal-header {
     padding: 0.3rem 1rem;
   }
   .modal-body {
-    height: 500px;
+    height: 400px;
     overflow-y: scroll;
   }
 }
@@ -194,7 +204,7 @@ body {
 }
 
 .modal-body {
-  height: 500px;
+  height: 550px;
   overflow-y: scroll;
 }
 
