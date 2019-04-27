@@ -8,7 +8,12 @@ const ItemCard = props => {
   return (
     <Fragment>
       <Card
-        className='pl-0 pr-0'>
+        className='item-card pl-0 pr-0 position-relative'>
+        {
+          isCartItem && <i
+                          className='remove-item-btn fas fa-times link-cursor'
+                          onClick={() => removeItem(item)} />
+        }
         <Card.Img
           variant='top'
           onClick={openModal}
