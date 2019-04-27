@@ -153,6 +153,26 @@ body {
   margin-top: 6rem;
 }
 
+.item-card:hover .remove-item-btn {
+  display: inline-block !important;
+}
+
+.quantity {
+  border: 1px solid black;
+  cursor: auto !important;
+}
+
+.remove-item-btn {
+  display:none;
+  position: absolute;
+  color: grey;
+  top: 2%;
+  left: 93%;
+  -ms-transform: scale(1.1, 1.1); 
+  -webkit-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+}
+
 .navbar-nav {
   background-color: #fff;
 }
