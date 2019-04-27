@@ -1,11 +1,16 @@
 import React, { Fragment, Component } from 'react'
 import { connect } from 'react-redux'
-import { Form } from 'react-bootstrap'
+import { Form, InputGroup } from 'react-bootstrap'
 import { getCategories } from '../actions/categories'
 
 class ItemFilter extends Component {
+
+  componentWillMount() {
+    this.props.getCategories()
+  }
+
   render() {
-    const { changeFilter, selected } = this.props
+    const { changeFilter, selected, categories } = this.props
 
     return (
       <Fragment>
@@ -13,21 +18,24 @@ class ItemFilter extends Component {
           id='filter-items-select'
           className='pb-2'
           inline>
-          <Form.Group>
-            <Form.Label>
-              <span
-                className='font-weight-bold pr-3'>Filter:
-              </span>
-            </Form.Label>
-              <Form.Control
-                onChange={changeFilter}
-                value={selected}
-                as='select'>
-                  <option>All</option>
-                  <option>Ring</option>
-                  <option>Necklace</option>
-              </Form.Control>
-          </Form.Group>
+          <InputGroup
+            className='filter'>
+            <InputGroup.Prepend>
+              <InputGroup.Text>
+                Filter:
+              </InputGroup.Text>
+            </InputGroup.Prepend>
+            <Form.Control
+              onChange={changeFilter}
+              value={selected}
+              as='select'>
+                {
+                  categories.data.map((cat, i) => (
+                      <option key={i}>{cat}</option>)
+                  )
+                }
+            </Form.Control>
+          </InputGroup>
         </Form>
       </Fragment>
     )
