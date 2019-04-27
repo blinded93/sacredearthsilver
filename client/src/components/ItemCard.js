@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import { Card } from 'react-bootstrap'
+import { formattedPrice } from '../helpers'
 
 const ItemCard = props => {
   const { id, item, openModal } = props
@@ -28,7 +29,9 @@ const ItemCard = props => {
           <Card.Text
             className='text-muted'>
             <small className='align-text-bottom'>
-              $</small>{formattedPrice}</Card.Text>
+                $</small>{formattedPrice(item.price)}
+            </Card.Text>
+          </div>
         </Card.Body>
       </Card>
     </Fragment>
