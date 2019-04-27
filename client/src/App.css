@@ -244,6 +244,34 @@ body {
 .card {
   transition: transform .2s;
 }
-/* .card:hover {
-  transform: scale(1.05);
-} */
+
+.show-details, .show-details:hover {
+  padding-left: 0;
+  color: black;
+}
+
+.item-details-table {
+  overflow-y: hidden;
+  max-height: 250px;
+
+	transition-property: all;
+	transition-duration: 1.0s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+.item-details-table.closed {
+  max-height: 0px;
+}
+
+.image-col {
+  position: absolute;
+  overflow-y: hidden;
+  left: 0;
+}
+.details-col {
+  position: absolute;
+  overflow-y: scroll;
+  /* top: 0;
+  bottom: 0; */
+  right: 0;
+}
