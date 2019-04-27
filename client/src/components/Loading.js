@@ -4,7 +4,7 @@ import { Button, Spinner } from 'react-bootstrap'
 const Loading = props => {
   return (
     <Fragment>
-      <Button variant="outline-primary" disabled>
+      <Button variant="outline-dark" disabled>
         <Spinner
           as="span"
           animation="grow"
